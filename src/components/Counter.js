@@ -5,9 +5,11 @@ import {increment,decrement,incrementByValue, SelectCount} from '../store/counte
 function Counter() {
   const [value, setValue]=useState(0);
   const dispatch=useDispatch();
-  const counter=useSelector((state)=>{
+  const counter=useSelector(SelectCount);
+  /*const counter=useSelector((state)=>{
     return state.counter.count
   });
+  */
   return (
     <div>
       <div>Counter: {counter} </div>
